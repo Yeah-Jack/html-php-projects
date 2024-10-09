@@ -1,0 +1,42 @@
+* {
+	font-family: "Poppins", sans-serif;
+	/* margin: 0;
+	padding: 0; */
+	scroll-behavior: smooth;
+	--black: #0f172a;
+	--white: #f9f9f9;
+	--gray: #bbbbbb;
+}
+
+body {
+	background-color: var(--black);
+	color: var(--white);
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+a {
+	color: unset;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+blockquote,
+.border {
+	border: 0.25rem solid var(--gray);
+}
+
+.border {
+	padding: 1rem;
+}
