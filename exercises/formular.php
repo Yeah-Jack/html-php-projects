@@ -4,7 +4,7 @@ $textfeld = checkempty($_GET["textfeld"], "textfeld");
 $nummer = checkempty($_GET["nummer"], "nummer");
 $datumuhrzeit = checkempty($_GET["datumhrzeit"], "datumuhrzeit");
 $dropdown = checkempty($_GET["dropdown"], "dropdown");
-$checkbox = checkempty($_GET["check"] , "check");
+$checkbox = checkempty($_GET["check"], "check");
 $textarea = checkempty($_GET["textarea"], "textarea");
 $email = checkempty($_GET["email"], "email");
 $url = checkempty($_GET["url"], "url");
@@ -12,8 +12,9 @@ $telnummer = checkempty($_GET["telnummer"], "telnummer");
 
 function checkempty($str, $what)
 {
-    if(empty($str))
+    if(empty($str)) {
         echo("Das Feld $what wurde nicht an den Server übergeben. Überprüfe, ob der name= Tag korrekt ausgefüllt ist. <br>");
+    }
     return $str;
 }
 

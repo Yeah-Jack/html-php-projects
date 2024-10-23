@@ -5,33 +5,25 @@ $passwortGET = $_GET["passwort"];
 $nutzernamePOST = $_POST["nutzername"];
 $passwortPOST = $_POST["passwort"];
 
-if(!empty($nutzernameGET) && !empty($passwortGET)) 
-{
+if(!empty($nutzernameGET) && !empty($passwortGET)) {
     echo "Es gibt einen Loginversuch über GET mit dem Nutzernamen: $nutzernameGET und dem Passwort: $passwortGET <br>";
     userlogin($nutzernameGET, $passwortGET);
 }
-if($_SERVER['REQUEST_METHOD'] == "POST")
-{
+if($_SERVER['REQUEST_METHOD'] == "POST") {
     echo "Es gibt einen Loginversuch über POST mit dem Nutzernamen: $nutzernamePOST und dem Passwort: $passwortPOST <br>";
     userlogin($nutzernamePOST, $passwortPOST);
 }
 function userlogin($username, $passwort)
-{   
-    if($username == "TKDV23")
-    {
+{
+    if($username == "TKDV23") {
         echo "Nutzername korrekt! Jetzt wird das Passwort überprüft! <br>";
 
-        if($passwort == "BwsHofheim23!")
-        {
+        if($passwort == "BwsHofheim23!") {
             echo "Passwort korrekt! Login erfolgreich! <br>";
-        }
-        else 
-        {
+        } else {
             echo "Passwort nicht korrekt! <br>";
         }
-    }
-    else
-    {
+    } else {
         echo "Nutzername nicht korrekt! <br>";
     }
 }
