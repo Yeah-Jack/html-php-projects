@@ -12,9 +12,10 @@ $telnummer = checkempty($_GET["telnummer"], "telnummer");
 
 function checkempty($str, $what)
 {
-	if (empty($str))
-		echo ("Das Feld $what wurde nicht an den Server übergeben. Überprüfe, ob der name= Tag korrekt ausgefüllt ist. <br>");
-	return $str;
+    if (empty($str)) {
+        echo("Das Feld $what wurde nicht an den Server übergeben. Überprüfe, ob der name= Tag korrekt ausgefüllt ist. <br>");
+    }
+    return $str;
 }
 
 echo "<h1>Folgende Infos wurden an den Server übergeben!</h1>";
