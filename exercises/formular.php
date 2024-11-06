@@ -12,9 +12,9 @@ $telnummer = checkempty($_GET["telnummer"], "telnummer");
 
 function checkempty($str, $what)
 {
-    if(empty($str))
-        echo("Das Feld $what wurde nicht an den Server übergeben. Überprüfe, ob der name= Tag korrekt ausgefüllt ist. <br>");
-    return $str;
+		if(empty($str))
+				echo("Das Feld $what wurde nicht an den Server übergeben. Überprüfe, ob der name= Tag korrekt ausgefüllt ist. <br>");
+		return $str;
 }
 
 echo "<h1>Folgende Infos wurden an den Server übergeben!</h1>";
@@ -32,4 +32,39 @@ echo "Telefonnummer: $telnummer<br>";
 
 <!-- ERST AB HIER ÄNDERUNGEN DURCHFÜHREN! -->
 
-<!-- FIX ME: Hier muss ein Formular hin -->
+<body>
+	<br>
+	<form method="get">
+		<label>Text</label>
+		<input type="text" name="textfeld">
+		<br>
+		<label>Number</label>
+		<input type="number" name="nummer">
+		<br>
+		<label>Date Time</label>
+		<input type="datetime-local" name="datumhrzeit">
+		<br>
+		<label>Dropdown</label>
+		<select name="dropdown">
+			<option value="option1">Option 1</option>
+			<option value="option2">Option 2</option>
+		</select>
+		<br>
+		<label>Checkbox</label>
+		<input type="checkbox" name="check">
+		<br>
+		<label>Textarea</label>
+		<textarea name="textarea"></textarea>
+		<br>
+		<label>E-Mail</label>
+		<input type="email" name="email">
+		<br>
+		<label>URL</label>
+		<input type="url" name="url">
+		<br>
+		<label>Telephonenumber</label>
+		<input type="tel" name="telnummer">
+		<br>
+		<button type="submit">Anmelden!</button>
+	</form>
+</body>
