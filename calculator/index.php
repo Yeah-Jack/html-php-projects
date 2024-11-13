@@ -11,35 +11,35 @@
 <body>
 	<?php
 
-	$operator = $_POST["operator"];
+    $operator = $_POST["operator"];
 	$number1 = $_POST["number1"];
 	$number2 = $_POST["number2"];
 	$result;
 
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-		switch ($operator) {
-			case 1:
-				$result = $number1 + $number2;
-				break;
-			case 2:
-				$result = $number1 - $number2;
-				break;
-			case 3:
-				$result = $number1 * $number2;
-				break;
-			case 4:
-				if ($number2 != 0) {
-					$result = $number1 / $number2;
-				} else {
-					$result = 'Error: Division by zero';
-				}
-				break;
-			default:
-				$result = 'Invalid operator';
-				break;
-		}
-		echo $result;
+	    switch ($operator) {
+	        case 1:
+	            $result = $number1 + $number2;
+	            break;
+	        case 2:
+	            $result = $number1 - $number2;
+	            break;
+	        case 3:
+	            $result = $number1 * $number2;
+	            break;
+	        case 4:
+	            if ($number2 != 0) {
+	                $result = $number1 / $number2;
+	            } else {
+	                $result = 'Error: Division by zero';
+	            }
+	            break;
+	        default:
+	            $result = 'Invalid operator';
+	            break;
+	    }
+	    echo $result;
 	}
 	?>
 
