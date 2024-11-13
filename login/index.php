@@ -49,7 +49,7 @@
 		<br />
 		<button type="submit">Anmelden!</button>
 	</form>
-	<!-- Es muss in doppelter ausführung vorhanden sein, einmal mit der method=GET und einmal mit method=POST -->
+
 	<form method="post">
 		<label>Benutzername - TKDV23</label>
 		<input type="text" name="nutzername" required />
