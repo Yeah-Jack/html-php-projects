@@ -11,7 +11,7 @@
 <body>
 	<?php
 
-	$textfeld = checkempty($_GET["textfeld"], "textfeld");
+    $textfeld = checkempty($_GET["textfeld"], "textfeld");
 	$nummer = checkempty($_GET["nummer"], "nummer");
 	$datumuhrzeit = checkempty($_GET["datumhrzeit"], "datumuhrzeit");
 	$dropdown = checkempty($_GET["dropdown"], "dropdown");
@@ -23,10 +23,10 @@
 
 	function checkempty($str, $what)
 	{
-		if (empty($str)) {
-			echo ("Das Feld $what wurde nicht an den Server übergeben. Überprüfe, ob der name= Tag korrekt ausgefüllt ist. <br>");
-		}
-		return $str;
+	    if (empty($str)) {
+	        echo("Das Feld $what wurde nicht an den Server übergeben. Überprüfe, ob der name= Tag korrekt ausgefüllt ist. <br>");
+	    }
+	    return $str;
 	}
 
 	echo "<h1>Folgende Infos wurden an den Server übergeben!</h1>";
