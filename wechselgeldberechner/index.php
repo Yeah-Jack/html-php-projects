@@ -22,12 +22,10 @@
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$zuZahlenderBetrag = $_POST["zuZahlenderBetrag"];
 		$gegebenerBetrag = $_POST["gegebenerBetrag"];
+		$rueckgeld = $gegebenerBetrag - $zuZahlenderBetrag;
 
 		echo 'Zu zahlender Betrag: ' . $zuZahlenderBetrag . '€ <br>';
 		echo 'Gegebener Betrag: ' . $gegebenerBetrag . '€ <br>';
-
-
-		$rueckgeld = $gegebenerBetrag - $zuZahlenderBetrag;
 		echo 'Rückgeld: ' . $rueckgeld . '€ <br>';
 
 
